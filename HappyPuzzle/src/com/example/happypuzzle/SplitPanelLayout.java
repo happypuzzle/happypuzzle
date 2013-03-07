@@ -280,7 +280,14 @@ public class SplitPanelLayout extends VerticalLayout implements
 
     @Override
     public void valueChange(ValueChangeEvent event) {
-        name = nameField.getValue();
+        String temp_name = nameField.getValue();
+        temp_name = temp_name.replaceAll(">", "");
+        temp_name = temp_name.replaceAll("<", "");
+        temp_name = temp_name.replaceAll("&", "");
+        if (temp_name.length() > 15) {
+            temp_name = temp_name.substring(0, 15);
+        }
+        name = temp_name;
         Notification.show("Name set to " + nameField.getValue());
     }
 
