@@ -1,0 +1,87 @@
+/* Import the reindeer theme.*/
+/* This only allows us to use the mixins defined in it and does not add any styles by itself. */
+@import "../reindeer/reindeer.scss";
+
+/* This contains all of your theme.*/
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin happypuzzletheme {
+  /* Include all the styles from the reindeer theme */
+  @include reindeer;
+
+ .v-splitpanel-first-container{
+overflow: hidden;
+background-color:#E4FEE6;
+}
+
+.v-absolutelayout-margin{
+background-color:#E4FEE6;
+//background-image:url('green.png');
+}
+
+
+
+
+
+
+.splitpanel .v-splitpanel-vsplitter-locked,
+.splitpanel .v-splitpanel-vsplitter{
+        width: 7px;
+        height: 7px;
+                border: 7px;
+                background: green;
+}
+
+
+.splitpanel2  .v-splitpanel-hsplitter-locked, 
+.splitpanel2 .v-splitpanel-hsplitter {
+  width: 7px;
+                border: 7px;
+        background: green;
+}
+
+
+.v-accordion-item{
+color:#003B0D;
+background:#F5FE68;
+border: 0px;
+//border-bottom: 1px solid #CCC; padding: 0 1em; background: #F5FE68;
+border-color:green;
+font-family : tahoma, arial, helvetica, sans-serif; 
+}
+
+.v-accordion-item-caption{
+color:#003B0D;
+background:#F5FE68;
+}
+
+.v-caption{
+color:yellow;
+background:green;
+}
+
+.v-gridlayout{
+border-style:ridge;
+border-width:5px;
+border-color:green
+}
+
+
+.label{
+color:#003B0D;
+font-family : tahoma, arial, helvetica, sans-serif; 
+}
+
+.biglabel{
+color:#003B0D;
+font-family : tahoma, arial, helvetica, sans-serif; 
+}
+
+
+ .v-Notification{
+    background: #FFFF00;
+    border: 10px solid #CCFF00;
+    color: #336600;
+ } 
+  
+  
+}
